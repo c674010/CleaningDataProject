@@ -1,0 +1,11 @@
+---
+title: "CodeBook"
+author: "Jie Qin"
+date: "Sunday, July 27, 2014"
+output: html_document
+---
+
+This codebook is for the project of Geting and Cleaning Data class.
+
+ID: ID for the peoples who participate the test
+activity: 6 different activities.

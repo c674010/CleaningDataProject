@@ -24,4 +24,9 @@ levels(test_act$activity) <-c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS",
 train <-cbind(train_id, train_act, train_x)
 test <-cbind(test_id, test_act, test_x)
 final <-rbind(train,test)
+
+measure1 <-subset(final, select=(grep("mean()",colnames(final))))
+measure2 <-subset(final, select=(grep("std()",colnames(final))))
+measure <-cbind(measure1,measure2)
+
 write.csv(final, file="project.csv", row.names=FALSE)
