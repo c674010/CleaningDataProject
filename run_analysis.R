@@ -28,5 +28,6 @@ final <-rbind(train,test)
 measure1 <-subset(final, select=(grep("mean()",colnames(final))))
 measure2 <-subset(final, select=(grep("std()",colnames(final))))
 measure <-cbind(measure1,measure2)
+test <-subset(measure, select=(-grep("meanFreq()", colnames(measure))))
 
-write.csv(final, file="project.csv", row.names=FALSE)
+write.csv(test, file="project.csv", row.names=FALSE)
